@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# AltaPay Frontend Technical Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project contains a Shop Order service written in Java, that you can Run as specified in the section [Run](.README.md#run)
 
-## Available Scripts
+The objective of the test is to write a frontend layer on top of the service as specified in the section [Assignment](.README.md#assignment)
 
-In the project directory, you can run:
+## Assignment
 
-### `npm start`
+**Functional Requirements**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [ ] Create a presentation to display all orders
+- [ ] Create a presentation to create a new order
+- [ ] Create a presentation to see order details (transactions)
+- [ ] Allow to perform transactions operations on the order
+- [ ] Navigation state needs to be preserved in the URL
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A presentation can be a page, view, modal, etc. Please feel free to design the flow as you see fit.
 
-### `npm test`
+**Technical Requirements:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Use ReactJS and TypeScript
+    - You may use a framework built on ReactJS
+- Working on the presentation design is a plus but not a must
+	- Only the flow and layout is mandatory
+- You may add the code to this project, or create a new one
+- Provide instructions on how to run the application
 
-### `npm run build`
+## Run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install:
+- Java 11
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+./gradlew bootRun
+```
 
-### `npm run eject`
+### Docker
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Install:
+- Docker
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+docker build -t technical-test-frontend .
+docker run -p 8080:8080 technical-test-frontend
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## API Documentation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Open API Specification: http://localhost:8080/v3/api-docs/
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Swagger: http://localhost:8080/swagger-ui.html
