@@ -26,7 +26,7 @@ const Sidebar = () => {
               whiteSpace: "nowrap",
             }}
           >
-            ALTA
+            AltaPay
           </div>
         </SidebarHeader>
         <SidebarContent>
